@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Compound Interest Calculator</title>
+</head>
+<body class="display-flex align-center justify-center">
+    <div class="container">
+        <div class="title">
+            Compound Interest Calculator
+        </div>
+             <form method="POST" class="form">
+
+                <div class="user-details display-flex flex-column">
+                    <div class="input-box display-flex flex-column">
+                        <label for="principal" >Principal Amount (₹):</label>
+                        <input type="number" name="principal" class="form-input" placeholder="Enter principal amount " required>
+                    </div>
+                    <div class="input-box display-flex flex-column">
+                        <label for="rate">Annual Interest Rate (%):</label>
+                        <input type="number" name="rate" placeholder="Enter interest rate" class="form-input" required>
+                    </div>
+                    <div class="input-box display-flex flex-column">
+                        <label for="time">Time (years):</label>
+                        <input type="number" name="time" placeholder="Enter time period" class="form-input" required>
+                    </div>
+                    <div class="input-box display-flex flex-column">
+                        <label for="compound_frequency">Compound Frequency (per year):</label>
+                        <input type="number" name="compound_frequency" placeholder="Enter frequency" class="form-input" required>
+                    </div>
+                </div>
+                 <div class="submit-button display-flex align-center justify-center">
+                    <button class="submit display-flex align-center justify-center" type="submit">Calculate</button>
+                 </div>
+             </form>
+        {% if result is not none %}
+        <p class="display-flex align-center justify-center">Compound Interest: ₹{{ result | round(2) }}</p>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

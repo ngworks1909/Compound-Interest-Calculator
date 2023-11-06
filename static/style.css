@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Prompt:wght@100&display=swap');
+*{
+    font-family: Poppins;
+}
+.display-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+body{
+    height: 100dvh;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    padding: 25px 30px;
+    background: #ffff;
+    border-radius: 5px;
+}
+.title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.user-details{
+    gap: 1rem;
+}
+.form{
+    margin-top: 15px;
+}
+.form-input{
+    margin-top: 3px;
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+}
+.form-input:focus,.form-input:valid{
+    border-color: #9b59b6;
+}
+.submit{
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    color: #ffff;
+    border: none;
+}
+
+
+
+
