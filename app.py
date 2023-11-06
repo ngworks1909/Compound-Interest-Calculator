@@ -8,7 +8,8 @@ def calculate():
         rate = float(request.form["rate"]) / 100
         time = float(request.form["time"])
         compound_frequency = int(request.form["compound_frequency"])
-
+        if compound_frequency == 0:
+            return render_template("index.html", result=0)
         amount = principal * (1 + rate/compound_frequency)**(compound_frequency*time)
         result = amount - principal
         return render_template("index.html", result=result)

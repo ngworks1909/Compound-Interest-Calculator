@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/style.css">
     <title>Compound Interest Calculator</title>
+    <script src="./app.js"></script>
 </head>
 <body class="display-flex align-center justify-center">
     <div class="container">
@@ -16,7 +17,7 @@
                 <div class="user-details display-flex flex-column">
                     <div class="input-box display-flex flex-column">
                         <label for="principal" >Principal Amount (₹):</label>
-                        <input type="number" name="principal" class="form-input" placeholder="Enter principal amount " required>
+                        <input type="number" name="principal" id="principle-input" class="form-input" placeholder="Enter principal amount " required>
                     </div>
                     <div class="input-box display-flex flex-column">
                         <label for="rate">Annual Interest Rate (%):</label>
@@ -31,8 +32,8 @@
                         <input type="number" name="compound_frequency" placeholder="Enter frequency" class="form-input" required>
                     </div>
                 </div>
-                 <div class="submit-button display-flex align-center justify-center">
-                    <button class="submit display-flex align-center justify-center" type="submit">Calculate</button>
+                 <div class="submit-button display-flex align-center justify-center" >
+                    <button class="submit display-flex align-center justify-center" id="submit-button" type="submit">Calculate</button>
                  </div>
              </form>
         {% if result is not none %}
